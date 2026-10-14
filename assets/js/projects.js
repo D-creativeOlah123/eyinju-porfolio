@@ -73,8 +73,10 @@ const PROJECTS_DATA = [
     tagline: "Social app for young Nigerians",
     category: ["app"],
     thumbnail: "assets/img/portfolio/vibetok-cover.webp",
+    thumbPosition: "100% 50%",
     images: [
-      "assets/img/portfolio/vibetok-cover.webp"
+      "assets/img/portfolio/vibetok-cover.webp",
+      "assets/img/portfolio/vibetok-screens.webp"
     ],
     description:
       "VibeTok is a Nigerian social media app designed for young adults aged 18–35 to connect, share content, express themselves, and discover new trends in a fun and engaging digital community.",
