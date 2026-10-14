@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title> Olaide Atechsis— UI/UX Designer & Web Developer</title>
+    <title>Olaide Atechsis — UI/UX Designer &amp; Web Developer</title>
     <meta content="Portfolio of Aderoju Olaide — UI/UX Designer, Web Developer, and Motion Graphics Artist" name="description" />
     <meta content="UI/UX, Designer, Web Developer, Portfolio, Figma, WordPress" name="keywords" />
+    <meta name="theme-color" content="#08080a" />
 
     <!-- Favicons -->
     <link href="assets/img/olaide2222.png" rel="icon" />
@@ -15,581 +16,503 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Template Main CSS File -->
+    <!-- Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- Motion is only enabled once JS is known to be running -->
+    <script>
+      document.documentElement.classList.add("js");
+      setTimeout(function () {
+        if (!window.__portfolioReady) document.documentElement.classList.remove("js");
+      }, 4000);
+    </script>
   </head>
 
   <body>
-    <!-- ======= Theme Toggle ======= -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <i class="bi bi-moon-fill"></i>
-      <i class="bi bi-sun-fill"></i>
-    </button>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- ======= Mobile nav toggle button ======= -->
-    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-
-    <!-- ======= Header / Sidebar Nav ======= -->
-    <header id="header" class="d-flex flex-column justify-content-center">
-      <nav id="navbar" class="navbar nav-menu">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-bar-chart-alt-2"></i> <span>Skills</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav>
+    <!-- ======= Floating Nav ======= -->
+    <header class="nav" id="nav" data-tone="light">
+      <div class="nav__pill">
+        <a href="#hero" class="nav__brand" aria-label="Aderoju Olaide — back to top">
+          <span class="avatar"><img src="assets/img/olaidee.jpg" alt="" /></span>
+          <span class="nav__name">Aderoju Olaide</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#portfolio">Work</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#resume">Resume</a>
+          <a href="#testimonials">Testimonials</a>
+        </nav>
+        <a href="#contact" class="nav__cta">Say “Hello!”</a>
+      </div>
     </header>
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero-section">
-      <div class="hero-bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-      </div>
-      <div class="hero-particles"></div>
-      <div class="container">
-        <div class="row align-items-center min-vh-100">
-          <div class="col-lg-7 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1200">
-            <div class="hero-content">
-              <span class="hero-greeting">I am <span class="gradient-text">Aderoju Olaide</span></span>
-              <h1 class="hero-title">Web Developer<br><span class="hero-title-accent">+UI/UX Designer</span></h1>
-              <h2 class="hero-subtitle"><span id="job-role"></span><span class="typing-cursor">|</span></h2>
-              <p class="hero-description">
-                Specialized in UI/UX Design — crafting intuitive interfaces and seamless user experiences that engage and delight.
-              </p>
-              <div class="hero-cta">
-                <a href="#portfolio" class="btn-primary-custom scrollto">View My Work <i class="bi bi-arrow-right"></i></a>
-                <a href="#contact" class="btn-outline-custom scrollto">Let's Talk</a>
-              </div>
-              <div class="hero-social">
-                <a href="https://x.com/OlaideAder5230" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/rokibat-aderoju-189524285/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-            <div class="hero-image">
-              <div class="hero-avatar-wrapper">
-                <div class="hero-avatar-glow"></div>
-                <div class="hero-avatar-ring"></div>
-                <img src="assets/img/olaidee.jpg" alt="Aderoju Olaide" class="hero-avatar-img" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Hero Stats Row -->
-        <div class="hero-stats-row" data-aos="fade-up" data-aos-delay="400">
-          <div class="hero-stat-item">
-            <span class="hero-stat-number purecounter" data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1.5">0</span>
-            <span class="hero-stat-label">Projects</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number">50<span class="hero-stat-plus">+</span></span>
-            <span class="hero-stat-label">Clients</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number">1.5<span class="hero-stat-plus">K</span></span>
-            <span class="hero-stat-label">Hours</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number purecounter" data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1.5">0</span>
-            <span class="hero-stat-label">Awards</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about section-padding">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Get to know me</span>
-            <h2 class="section-title">About Me</h2>
-            <div class="title-decoration"></div>
+      <!-- ======= Hero (light) ======= -->
+      <section id="hero" class="hero sheet tone-light">
+        <div class="wrap">
+          <p class="status" data-reveal><span class="status__dot"></span>Available for freelance</p>
+          <p class="hero__intro" data-reveal>
+            <span class="wave" aria-hidden="true">👋</span> Hi, I'm Aderoju Olaide, a UI/UX designer and web developer in Ibadan, Nigeria…
+          </p>
+          <h1 class="display" data-split>
+            Bringing design, code and <em class="serif">motion</em> together
+            <span class="dim">for engaging user experiences.</span>
+          </h1>
+
+          <div class="hero__foot">
+            <p class="hero__lede" data-reveal>
+              Specialized in UI/UX Design — crafting intuitive interfaces and seamless user experiences that engage and delight.
+            </p>
+            <div class="hero__actions" data-reveal>
+              <a href="#portfolio" class="btn btn--solid">View my work <i class="bi bi-arrow-down-right"></i></a>
+              <a href="#contact" class="btn btn--ghost">Let's talk</a>
+            </div>
           </div>
 
-          <div class="row align-items-center g-5">
-            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-              <div class="about-image">
-                <img src="assets/img/eyin.jpg" class="img-fluid" alt="Aderoju Olaide" />
-                <div class="about-image-badge">
-                  <span class="number">3+</span>
-                  <span class="text">Years Experience</span>
-                </div>
-              </div>
+          <ul class="stickers" aria-label="What I do" data-observe>
+            <li class="sticker sticker--lime"><i class="bi bi-globe2"></i>web development</li>
+            <li class="sticker sticker--sky"><i class="bi bi-wordpress"></i>wordpress</li>
+            <li class="sticker sticker--orange"><i class="bi bi-vector-pen"></i>prototyping</li>
+            <li class="sticker sticker--lilac"><i class="bi bi-lightning-charge"></i>motion graphics</li>
+            <li class="sticker sticker--mint"><i class="bi bi-cursor"></i>ui/ux design</li>
+            <li class="sticker sticker--rose"><i class="bi bi-graph-up-arrow"></i>strategy</li>
+          </ul>
+        </div>
+      </section>
+      <!-- End Hero -->
+
+      <!-- ======= Portfolio (dark) ======= -->
+      <section id="portfolio" class="work band tone-dark pad">
+        <div class="wrap">
+          <header class="sec-head" data-reveal>
+            <span class="sec-head__label">Selected work</span>
+            <span class="sec-head__rule"></span>
+            <span class="sec-head__num">01</span>
+          </header>
+          <div class="work__intro">
+            <h2 class="h2" data-split>My recent work, from mobile apps to the <em class="serif">web.</em></h2>
+            <div class="chips" role="group" aria-label="Filter projects" data-reveal>
+              <button class="chip" type="button" data-filter="*" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+              <button class="chip" type="button" data-filter="web" aria-pressed="false">Web</button>
+              <button class="chip" type="button" data-filter="app" aria-pressed="false">Mobile app</button>
             </div>
-            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
-              <div class="about-content">
-                <h3>UI/UX Designer &amp; Web Developer</h3>
-                <p class="about-lead">Bringing Design, Code, and Motion Together for Engaging User Experiences.</p>
-                <p>
-                  I'm a passionate UI/UX designer with a knack for transforming ideas into engaging, user-friendly digital experiences. Over the years, I've honed my skills in HTML/CSS and WordPress, allowing me to build responsive, accessible websites that focus on both aesthetics and functionality. My background also includes motion graphics and video editing, which helps me add dynamic visual storytelling elements to every project I work on.
+          </div>
+        </div>
+
+        <!-- Cards rendered by main.js from projects.js data -->
+        <div class="work-track" id="workTrack" tabindex="0" role="region" aria-label="Projects — use the arrow keys to browse"></div>
+
+        <div class="wrap work__controls">
+          <div class="work__count" aria-live="polite">
+            <span id="workCurrent">01</span>
+            <span class="work__progress"><i id="workBar"></i></span>
+            <span id="workTotal">09</span>
+          </div>
+          <div class="work__arrows">
+            <button class="arrow-pill" id="workPrev" type="button" aria-label="Previous project"><i class="bi bi-arrow-left"></i></button>
+            <button class="arrow-pill arrow-pill--solid" id="workNext" type="button" aria-label="Next project"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio -->
+
+      <!-- ======= About + Services (light) ======= -->
+      <div class="sheet tone-light">
+        <section id="about" class="about pad">
+          <div class="wrap">
+            <header class="sec-head" data-reveal>
+              <span class="sec-head__label">About me</span>
+              <span class="sec-head__rule"></span>
+              <span class="sec-head__num">02</span>
+            </header>
+
+            <div class="about__grid">
+              <div class="about__photos" data-reveal>
+                <figure class="about__photo">
+                  <img src="assets/img/olaidee.jpg" alt="Aderoju Olaide working on a laptop at the Sui Developers Workshop in Ibadan" loading="lazy" />
+                </figure>
+                <figure class="polaroid">
+                  <img src="assets/img/eyin.jpg" alt="Portrait of Aderoju Olaide" loading="lazy" />
+                  <figcaption>Ibadan, Nigeria</figcaption>
+                </figure>
+              </div>
+
+              <div class="about__copy">
+                <h2 class="h2" data-split>UI/UX designer &amp; web developer, <span class="dim">with an eye for <em class="serif">motion.</em></span></h2>
+                <p class="lead" data-reveal>
+                  I'm a passionate UI/UX designer with a knack for transforming ideas into engaging, user-friendly digital experiences.
                 </p>
-                <div class="about-info-grid">
-                  <div class="about-info-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <div><strong>Location</strong><span>Nigeria, Oyo State</span></div>
-                  </div>
-                  <div class="about-info-item">
-                    <i class="bi bi-envelope"></i>
-                    <div><strong>Email</strong><span>aderojuolaide780@gmail.com</span></div>
-                  </div>
-                  <div class="about-info-item">
-                    <i class="bi bi-phone"></i>
-                    <div><strong>Phone</strong><span>+234 8117665220</span></div>
-                  </div>
-                  <div class="about-info-item">
-                    <i class="bi bi-check-circle"></i>
-                    <div><strong>Freelance</strong><span class="status-available">Available</span></div>
-                  </div>
-                </div>
-                <a href="#contact" class="btn-primary-custom scrollto">Get In Touch <i class="bi bi-arrow-right"></i></a>
+                <p data-reveal>
+                  Over the years, I've honed my skills in HTML/CSS and WordPress, allowing me to build responsive, accessible websites that focus on both aesthetics and functionality. My background also includes motion graphics and video editing, which helps me add dynamic visual storytelling elements to every project I work on.
+                </p>
+                <dl class="facts" data-reveal>
+                  <div><dt>Location</dt><dd>Nigeria, Oyo State</dd></div>
+                  <div><dt>Email</dt><dd><a href="mailto:aderojuolaide780@gmail.com">aderojuolaide780@gmail.com</a></dd></div>
+                  <div><dt>Phone</dt><dd><a href="tel:+2348117665220">+234 8117665220</a></dd></div>
+                  <div><dt>Freelance</dt><dd><span class="status__dot"></span>Available</dd></div>
+                </dl>
+                <a href="#contact" class="btn btn--solid" data-reveal>Get in touch <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
+
+            <ul class="stats" data-reveal>
+              <li>
+                <span class="stat__num"><span data-count="3">3</span><sup>+</sup></span>
+                <span class="stat__label">Years experience</span>
+              </li>
+              <li>
+                <span class="stat__num"><span data-count="14">14</span></span>
+                <span class="stat__label">Projects</span>
+              </li>
+              <li>
+                <span class="stat__num"><span data-count="50">50</span><sup>+</sup></span>
+                <span class="stat__label">Clients</span>
+              </li>
+              <li>
+                <span class="stat__num"><span data-count="1.5">1.5</span><sup>K</sup></span>
+                <span class="stat__label">Hours</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="services" class="services pad">
+          <div class="wrap">
+            <header class="sec-head" data-reveal>
+              <span class="sec-head__label">What I offer</span>
+              <span class="sec-head__rule"></span>
+              <span class="sec-head__num">03</span>
+            </header>
+            <h2 class="h2" data-split>Services, from first sketch <span class="dim">to shipped <em class="serif">product.</em></span></h2>
+
+            <ol class="rows">
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">01</span>
+                  <h3 class="row__title">UI/UX Design</h3>
+                  <p class="row__desc">Crafting intuitive interfaces and seamless user experiences that engage and delight your audience.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">02</span>
+                  <h3 class="row__title">Web Development</h3>
+                  <p class="row__desc">Building responsive, high-performance websites with clean, efficient code to bring your digital vision to life.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">03</span>
+                  <h3 class="row__title">Motion Graphics</h3>
+                  <p class="row__desc">Creating dynamic visual stories through captivating motion graphics and professional video editing.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">04</span>
+                  <h3 class="row__title">WordPress Development</h3>
+                  <p class="row__desc">Customizing themes and building robust, scalable sites on the world's most popular CMS.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">05</span>
+                  <h3 class="row__title">Prototyping &amp; Interaction</h3>
+                  <p class="row__desc">Transforming ideas into interactive prototypes and fine-tuning user interactions for intuitive experiences.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="row" href="#contact">
+                  <span class="row__num">06</span>
+                  <h3 class="row__title">Digital Strategy</h3>
+                  <p class="row__desc">Aligning design and technology with your business goals through expert advice and innovative solutions.</p>
+                  <span class="row__arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <!-- End About + Services -->
+
+      <!-- ======= Resume + Skills (dark) ======= -->
+      <section id="resume" class="resume band tone-dark pad">
+        <div class="wrap">
+          <header class="sec-head" data-reveal>
+            <span class="sec-head__label">My journey</span>
+            <span class="sec-head__rule"></span>
+            <span class="sec-head__num">04</span>
+          </header>
+          <h2 class="h2" data-split>Experience, education <span class="dim">&amp; the tools I <em class="serif">reach for.</em></span></h2>
+
+          <div class="tl-group">
+            <h3 class="tl-group__label" data-reveal><i class="bi bi-briefcase"></i> Experience</h3>
+            <ol class="tl">
+              <li class="tl__row" data-reveal>
+                <span class="tl__date">2024 – Present</span>
+                <div class="tl__role">
+                  <h4>UI/UX Design Intern</h4>
+                  <p>Stepping Stone Advertising</p>
+                </div>
+                <ul class="tl__points">
+                  <li>Designed e-commerce app prototypes with user research</li>
+                  <li>Developed wireframes and high-fidelity prototypes using Adobe XD</li>
+                  <li>Enhanced user satisfaction by 30% through functional prototyping</li>
+                  <li>Created 4+ design presentations monthly for clients</li>
+                </ul>
+              </li>
+              <li class="tl__row" data-reveal>
+                <span class="tl__date">Jan 2023 – Sep 2024</span>
+                <div class="tl__role">
+                  <h4>Freelance UI/UX Designer</h4>
+                  <p>Remote</p>
+                </div>
+                <ul class="tl__points">
+                  <li>Designed responsive interfaces for small business websites using Figma</li>
+                  <li>Conducted user research and created wireframes to improve user flow</li>
+                  <li>Designed intuitive dashboards for task management projects</li>
+                  <li>Redesigned the Spotify app with pure HTML/CSS</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tl-group">
+            <h3 class="tl-group__label" data-reveal><i class="bi bi-mortarboard"></i> Education</h3>
+            <ol class="tl">
+              <li class="tl__row" data-reveal>
+                <span class="tl__date">2023 – 2025</span>
+                <div class="tl__role">
+                  <h4>Certificate in UI/UX Design &amp; Web Development</h4>
+                  <p>SQI College of ICT, Dugbe, Nigeria</p>
+                </div>
+                <p class="tl__points">Completed comprehensive curriculum covering user research, wireframing, prototyping, visual design, and usability testing. Specialized in Figma, Adobe XD, Illustrator, and After Effects.</p>
+              </li>
+              <li class="tl__row" data-reveal>
+                <span class="tl__date">2022 – 2024</span>
+                <div class="tl__role">
+                  <h4>National Diploma in Business Administration</h4>
+                  <p>Ibadan City Polytechnic, Nigeria</p>
+                </div>
+                <p class="tl__points">Gained foundational knowledge in business principles, management, and entrepreneurship. Applied business knowledge to creative projects, bridging business strategy with design thinking.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tl-group" id="skills">
+            <h3 class="tl-group__label" data-reveal><i class="bi bi-stars"></i> Skills &amp; tools</h3>
+            <ul class="skills">
+              <li class="skill" style="--v: 90%" data-reveal>
+                <span class="skill__name">UI/UX Design</span>
+                <span class="skill__value">90<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+              <li class="skill" style="--v: 90%" data-reveal>
+                <span class="skill__name">Frontend</span>
+                <span class="skill__value">90<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+              <li class="skill" style="--v: 90%" data-reveal>
+                <span class="skill__name">WordPress</span>
+                <span class="skill__value">90<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+              <li class="skill" style="--v: 80%" data-reveal>
+                <span class="skill__name">Database</span>
+                <span class="skill__value">80<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+              <li class="skill" style="--v: 70%" data-reveal>
+                <span class="skill__name">Backend</span>
+                <span class="skill__value">70<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+              <li class="skill" style="--v: 55%" data-reveal>
+                <span class="skill__name">After Effects / Spline 3D</span>
+                <span class="skill__value">55<sup>%</sup></span>
+                <span class="skill__bar"><i></i></span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <!-- End About Section -->
+      <!-- End Resume + Skills -->
 
-      <!-- Stats integrated into Hero section above -->
+      <!-- ======= Testimonials (light) ======= -->
+      <section id="testimonials" class="testimonials sheet tone-light pad">
+        <div class="wrap">
+          <header class="sec-head" data-reveal>
+            <span class="sec-head__label">What people say</span>
+            <span class="sec-head__rule"></span>
+            <span class="sec-head__num">05</span>
+          </header>
 
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-padding section-bg">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">My expertise</span>
-            <h2 class="section-title">Skills &amp; Tools</h2>
-            <div class="title-decoration"></div>
-          </div>
-          <div class="row skills-content g-4">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">UI/UX Design</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">FRONTEND</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">BACKEND</span>
-                  <span class="skill-percentage">70%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
+          <div class="quotes">
+            <div class="quotes__aside">
+              <h2 class="h2" data-split>Let's see what my clients <em class="serif">say.</em></h2>
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">DATABASE</span>
-                  <span class="skill-percentage">80%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">WordPress</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">After Effects/Spline 3D</span>
-                  <span class="skill-percentage">55%</span>
-                </div>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
+
+            <ul class="quotes__list">
+              <li data-reveal>
+                <figure class="quote">
+                  <blockquote>“Working with Olaide was an exceptional experience. The attention to detail and creative vision brought our brand to life in ways we never imagined.”</blockquote>
+                  <figcaption>
+                    <img src="assets/img/testimonials/tife.jpg" alt="" loading="lazy" />
+                    <span><strong>Oluwasegun Jesunifemi</strong><small>CEO &amp; Founder</small></span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li data-reveal>
+                <figure class="quote">
+                  <blockquote>“The UI/UX designs delivered were world-class. Every interaction was thoughtfully crafted, and the final product exceeded our expectations.”</blockquote>
+                  <figcaption>
+                    <img src="assets/img/kenny.jpeg" alt="" loading="lazy" />
+                    <span><strong>Kenny Kadiri</strong><small>Developer</small></span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li data-reveal>
+                <figure class="quote">
+                  <blockquote>“Our e-commerce site saw a 40% increase in conversions after the redesign. The user research and prototyping process was incredibly thorough.”</blockquote>
+                  <figcaption>
+                    <img src="assets/img/testimonials/testimonials-3.jpg" alt="" loading="lazy" />
+                    <span><strong>Azeezat Abdul Azeez</strong><small>Store Owner</small></span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li data-reveal>
+                <figure class="quote">
+                  <blockquote>“Professional, creative, and incredibly responsive. The motion graphics added a whole new dimension to our brand communications.”</blockquote>
+                  <figcaption>
+                    <img src="assets/img/kennymii.jpg" alt="" loading="lazy" />
+                    <span><strong>Glays</strong><small>Freelancer</small></span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li data-reveal>
+                <figure class="quote">
+                  <blockquote>“From wireframes to final delivery, every step was handled with exceptional care. Our WordPress site looks and functions beautifully.”</blockquote>
+                  <figcaption>
+                    <img src="assets/img/testimonials/testimonials-5.jpg" alt="" loading="lazy" />
+                    <span><strong>John Larson</strong><small>Entrepreneur</small></span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <!-- End Skills Section -->
+      <!-- End Testimonials -->
 
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume section-padding">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">My journey</span>
-            <h2 class="section-title">Resume</h2>
-            <div class="title-decoration"></div>
-          </div>
+      <!-- ======= Contact (dark) ======= -->
+      <section id="contact" class="contact band tone-dark">
+        <div class="wrap">
+          <header class="sec-head" data-reveal>
+            <span class="sec-head__label">Get in touch</span>
+            <span class="sec-head__rule"></span>
+            <span class="sec-head__num">06</span>
+          </header>
 
-          <div class="row g-5">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="resume-column">
-                <h3 class="resume-column-title"><i class="bi bi-mortarboard"></i> Education</h3>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                      <span class="timeline-date">2022 – 2024</span>
-                      <h4>National Diploma in Business Administration</h4>
-                      <p class="timeline-place">Ibadan City Polytechnic, Nigeria</p>
-                      <p>Gained foundational knowledge in business principles, management, and entrepreneurship. Applied business knowledge to creative projects, bridging business strategy with design thinking.</p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                      <span class="timeline-date">2023 – 2025</span>
-                      <h4>Certificate in UI/UX Design &amp; Web Development</h4>
-                      <p class="timeline-place">SQI College of ICT, Dugbe, Nigeria</p>
-                      <p>Completed comprehensive curriculum covering user research, wireframing, prototyping, visual design, and usability testing. Specialized in Figma, Adobe XD, Illustrator, and After Effects.</p>
-                    </div>
-                  </div>
-                </div>
+          <p class="contact__kicker" data-reveal>Have a project in mind? Let's build something amazing together.</p>
+          <a class="mail" href="mailto:aderojuolaide780@gmail.com" data-reveal>
+            <span class="mail__text">aderojuolaide780<span class="dim">@gmail.com</span></span>
+            <span class="mail__arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+
+          <div class="contact__grid">
+            <dl class="contact__info" data-reveal>
+              <div>
+                <dt>Location</dt>
+                <dd>No 19, Hassan Street, Off Odutola, Oke Ado, Ibadan</dd>
               </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="resume-column">
-                <h3 class="resume-column-title"><i class="bi bi-briefcase"></i> Experience</h3>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                      <span class="timeline-date">Jan 2023 – Sep 2024</span>
-                      <h4>Freelance UI/UX Designer</h4>
-                      <p class="timeline-place">Remote</p>
-                      <ul>
-                        <li>Designed responsive interfaces for small business websites using Figma</li>
-                        <li>Conducted user research and created wireframes to improve user flow</li>
-                        <li>Designed intuitive dashboards for task management projects</li>
-                        <li>Redesigned the Spotify app with pure HTML/CSS</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                      <span class="timeline-date">2024 – Present</span>
-                      <h4>UI/UX Design Intern</h4>
-                      <p class="timeline-place">Stepping Stone Advertising</p>
-                      <ul>
-                        <li>Designed e-commerce app prototypes with user research</li>
-                        <li>Developed wireframes and high-fidelity prototypes using Adobe XD</li>
-                        <li>Enhanced user satisfaction by 30% through functional prototyping</li>
-                        <li>Created 4+ design presentations monthly for clients</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <dt>Call</dt>
+                <dd><a href="tel:+2349134347231">+234 913 434 7231</a></dd>
               </div>
-            </div>
+              <div>
+                <dt>Elsewhere</dt>
+                <dd class="socials">
+                  <a href="https://x.com/OlaideAder5230" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" /></svg>
+                    X / Twitter
+                  </a>
+                  <a href="https://www.linkedin.com/in/rokibat-aderoju-189524285/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </dd>
+              </div>
+            </dl>
+
+            <form action="forms/contact.php" method="post" role="form" class="contact-form php-email-form" data-reveal>
+              <div class="field">
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Your email</label>
+                <input type="email" name="email" id="email" autocomplete="email" required />
+              </div>
+              <div class="field field--full">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required />
+              </div>
+              <div class="field field--full">
+                <label for="message">Your message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+              </div>
+              <div class="form-status field--full">
+                <div class="loading">Sending…</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <button type="submit" class="btn btn--solid">Send message <i class="bi bi-arrow-right"></i></button>
+            </form>
           </div>
         </div>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" class="footer wrap">
+          <div class="footer__brand">
+            <span class="avatar"><img src="assets/img/olaidee.jpg" alt="" loading="lazy" /></span>
+            <p><strong>Aderoju Olaide</strong>Crafting digital experiences that are intuitive, accessible, and visually stunning.</p>
+          </div>
+          <nav class="footer__links" aria-label="Footer">
+            <a href="#portfolio">Work</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#resume">Resume</a>
+            <a href="#testimonials">Testimonials</a>
+          </nav>
+          <div class="footer__meta">
+            <span>Ibadan <span id="localTime"></span></span>
+            <a href="#hero" class="footer__top">Back to top <i class="bi bi-arrow-up"></i></a>
+          </div>
+          <p class="footer__copy">&copy; <span id="currentYear"></span> Aderoju Olaide. All Rights Reserved.</p>
+        </footer>
+        <!-- End Footer -->
       </section>
-      <!-- End Resume Section -->
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-padding section-bg">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">My recent work</span>
-            <h2 class="section-title">Portfolio</h2>
-            <div class="title-decoration"></div>
-          </div>
-
-          <!-- Filter Buttons -->
-          <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-            <button class="filter-btn active" data-filter="*">All</button>
-            <button class="filter-btn" data-filter=".filter-app">App</button>
-            <button class="filter-btn" data-filter=".filter-card">Card</button>
-            <button class="filter-btn" data-filter=".filter-web">Web</button>
-          </div>
-
-          <!-- Portfolio Grid — rendered dynamically by JS -->
-          <div class="portfolio-grid row g-4" id="portfolioGrid" data-aos="fade-up" data-aos-delay="200">
-            <!-- Cards injected by main.js from projects.js data -->
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
-
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-padding">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">What I offer</span>
-            <h2 class="section-title">Services</h2>
-            <div class="title-decoration"></div>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-palette"></i></div>
-                <h4>UI/UX Design</h4>
-                <p>Crafting intuitive interfaces and seamless user experiences that engage and delight your audience.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-code-slash"></i></div>
-                <h4>Web Development</h4>
-                <p>Building responsive, high-performance websites with clean, efficient code to bring your digital vision to life.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-camera-reels"></i></div>
-                <h4>Motion Graphics</h4>
-                <p>Creating dynamic visual stories through captivating motion graphics and professional video editing.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-wordpress"></i></div>
-                <h4>WordPress Development</h4>
-                <p>Customizing themes and building robust, scalable sites on the world's most popular CMS.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-phone"></i></div>
-                <h4>Prototyping &amp; Interaction</h4>
-                <p>Transforming ideas into interactive prototypes and fine-tuning user interactions for intuitive experiences.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-card">
-                <div class="service-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                <h4>Digital Strategy</h4>
-                <p>Aligning design and technology with your business goals through expert advice and innovative solutions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Services Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials section-padding section-bg">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">What people say</span>
-            <h2 class="section-title">Testimonials</h2>
-            <div class="title-decoration"></div>
-          </div>
-
-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="testimonial-header">
-                    <img src="assets/img/testimonials/tife.jpg" class="testimonial-img" alt="" />
-                    <div><h4>Oluwasegun Jesunifemi</h4><span>CEO &amp; Founder</span></div>
-                  </div>
-                  <div class="testimonial-stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>"Working with Olaide was an exceptional experience. The attention to detail and creative vision brought our brand to life in ways we never imagined."</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="testimonial-header">
-                    <img src="assets/img/kenny.jpeg" class="testimonial-img" alt="" />
-                    <div><h4>Kenny Kadiri</h4><span>Developer</span></div>
-                  </div>
-                  <div class="testimonial-stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                  </div>
-                  <p>"The UI/UX designs delivered were world-class. Every interaction was thoughtfully crafted, and the final product exceeded our expectations."</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="testimonial-header">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
-                    <div><h4>Azeezat Abdul Azeez</h4><span>Store Owner</span></div>
-                  </div>
-                  <div class="testimonial-stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>"Our e-commerce site saw a 40% increase in conversions after the redesign. The user research and prototyping process was incredibly thorough."</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="testimonial-header">
-                    <img src="assets/img/kennymii.jpg" class="testimonial-img" alt="" />
-                    <div><h4>Glays</h4><span>Freelancer</span></div>
-                  </div>
-                  <div class="testimonial-stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                  </div>
-                  <p>"Professional, creative, and incredibly responsive. The motion graphics added a whole new dimension to our brand communications."</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="testimonial-header">
-                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
-                    <div><h4>John Larson</h4><span>Entrepreneur</span></div>
-                  </div>
-                  <div class="testimonial-stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>"From wireframes to final delivery, every step was handled with exceptional care. Our WordPress site looks and functions beautifully."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact section-padding">
-        <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Get in touch</span>
-            <h2 class="section-title">Contact Me</h2>
-            <div class="title-decoration"></div>
-          </div>
-
-          <div class="row g-5">
-            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-              <div class="contact-info">
-                <div class="contact-info-card">
-                  <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
-                  <h4>Location</h4>
-                  <p>No 19, Hassan Street, Off Odutola, Oke Ado, Ibadan</p>
-                </div>
-                <div class="contact-info-card">
-                  <div class="contact-icon"><i class="bi bi-envelope"></i></div>
-                  <h4>Email</h4>
-                  <p>aderojuolaide780@gmail.com</p>
-                </div>
-                <div class="contact-info-card">
-                  <div class="contact-icon"><i class="bi bi-phone"></i></div>
-                  <h4>Call</h4>
-                  <p>+234 913 434 7231</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
-              <form action="forms/contact.php" method="post" role="form" class="contact-form php-email-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
-                      <label for="name">Your Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
-                      <label for="email">Your Email</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
-                      <label for="subject">Subject</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control" name="message" id="message" placeholder="Message" required style="height: 180px"></textarea>
-                      <label for="message">Your Message</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <button type="submit" class="btn-primary-custom">Send Message <i class="bi bi-send"></i></button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
+      <!-- End Contact -->
     </main>
     <!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-content">
-          <h3>Aderoju Olaide</h3>
-          <p>Crafting digital experiences that are intuitive, accessible, and visually stunning. Let's build something amazing together.</p>
-          <div class="footer-social">
-            <a href="https://x.com/OlaideAder5230" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/rokibat-aderoju-189524285/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-          </div>
-          <div class="footer-copyright">&copy; <span id="currentYear"></span> Aderoju Olaide. All Rights Reserved.</div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Projects Data -->
     <script src="assets/js/projects.js"></script>
-    <!-- Template Main JS File -->
+    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>

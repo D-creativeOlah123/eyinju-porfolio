@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <title>Project Details — Aderoju Olaide Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <meta name="theme-color" content="#08080a">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -16,142 +17,130 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Motion is only enabled once JS is known to be running -->
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!window.__portfolioReady) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
 </head>
 
-<body>
-  <!-- ======= Theme Toggle ======= -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-    <i class="bi bi-moon-fill"></i>
-    <i class="bi bi-sun-fill"></i>
-  </button>
+<body class="tone-dark">
+  <!-- ======= Floating Nav ======= -->
+  <header class="nav" id="nav" data-tone="dark">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand" aria-label="Aderoju Olaide — home">
+        <span class="avatar"><img src="assets/img/olaidee.jpg" alt=""></span>
+        <span class="nav__name">Aderoju Olaide</span>
+      </a>
+      <a href="index.html#portfolio" class="nav__cta"><i class="bi bi-arrow-left"></i>&nbsp; All work</a>
+    </div>
+  </header>
 
-  <!-- Back Navigation -->
-  <a href="index.html#portfolio" class="detail-back-btn" data-aos="fade-right">
-    <i class="bi bi-arrow-left"></i> Back to Portfolio
-  </a>
-
-  <main id="main" class="portfolio-detail-page">
+  <main id="main" class="detail">
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details section-padding">
-      <div class="container">
+    <section id="portfolio-details" class="wrap">
 
-        <!-- Dynamic project title -->
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-subtitle" id="detailCategory">Project</span>
-          <h2 class="section-title" id="detailTitle">Loading...</h2>
-          <div class="title-decoration"></div>
+      <!-- Dynamic project title -->
+      <p class="detail__category" id="detailCategory" data-reveal>Project</p>
+      <h1 class="display" id="detailTitle" data-reveal>Loading...</h1>
+
+      <div class="detail__grid">
+
+        <!-- Image Slider -->
+        <div class="portfolio-details-slider swiper" data-reveal>
+          <div class="swiper-wrapper" id="detailSlider">
+            <!-- Slides injected dynamically -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
 
-        <div class="row g-5">
-
-          <!-- Image Slider -->
-          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper" id="detailSlider">
-                <!-- Slides injected dynamically -->
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+        <!-- Project Info -->
+        <div class="detail__aside" data-reveal>
+          <h2>Project Information</h2>
+          <div class="detail-info-grid">
+            <div class="detail-info-item">
+              <span class="detail-label">Category</span>
+              <span class="detail-value" id="detailCategoryValue">—</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Role</span>
+              <span class="detail-value" id="detailRole">—</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Client</span>
+              <span class="detail-value" id="detailClient">—</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Date</span>
+              <span class="detail-value" id="detailDate">—</span>
             </div>
           </div>
 
-          <!-- Project Info -->
-          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
-            <div class="portfolio-detail-info">
-              <h3>Project Information</h3>
-              <div class="detail-info-grid">
-                <div class="detail-info-item">
-                  <span class="detail-label">Category</span>
-                  <span class="detail-value" id="detailCategoryValue">—</span>
-                </div>
-                <div class="detail-info-item">
-                  <span class="detail-label">Client</span>
-                  <span class="detail-value" id="detailClient">—</span>
-                </div>
-                <div class="detail-info-item">
-                  <span class="detail-label">Date</span>
-                  <span class="detail-value" id="detailDate">—</span>
-                </div>
-              </div>
-
-              <!-- Technologies -->
-              <div class="detail-technologies" id="detailTechnologies">
-                <!-- Tech badges injected dynamically -->
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="detail-actions">
-                <a href="#" class="btn-primary-custom" id="detailLiveLink" target="_blank" rel="noopener">
-                  <i class="bi bi-box-arrow-up-right"></i> Live Preview
-                </a>
-                <a href="#" class="btn-outline-custom" id="detailGithubLink" target="_blank" rel="noopener" style="display:none;">
-                  <i class="bi bi-github"></i> View Code
-                </a>
-              </div>
-            </div>
-
-            <!-- Project Description -->
-            <div class="portfolio-detail-description" data-aos="fade-up" data-aos-delay="300">
-              <h3>About This Project</h3>
-              <p id="detailDescription">Loading project description...</p>
-            </div>
+          <!-- Technologies -->
+          <div class="detail-technologies" id="detailTechnologies">
+            <!-- Tech badges injected dynamically -->
           </div>
 
-        </div>
+          <!-- Action Buttons -->
+          <div class="detail-actions">
+            <a href="#" class="btn btn--solid" id="detailLiveLink" target="_blank" rel="noopener">
+              Live Preview <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="#" class="btn btn--ghost" id="detailGithubLink" target="_blank" rel="noopener" style="display:none;">
+              <i class="bi bi-github"></i> View Code
+            </a>
+            <a href="#" class="btn btn--ghost" id="detailFigmaLink" target="_blank" rel="noopener" style="display:none;">
+              <i class="bi bi-vector-pen"></i> View in Figma
+            </a>
+          </div>
 
-        <!-- Navigation between projects -->
-        <div class="project-navigation" data-aos="fade-up" data-aos-delay="400">
-          <a href="#" class="project-nav-btn" id="prevProject">
-            <i class="bi bi-arrow-left"></i>
-            <span>Previous Project</span>
-          </a>
-          <a href="index.html#portfolio" class="project-nav-btn project-nav-grid">
-            <i class="bi bi-grid-3x3-gap"></i>
-            <span>All Projects</span>
-          </a>
-          <a href="#" class="project-nav-btn" id="nextProject">
-            <span>Next Project</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+          <!-- Project Description -->
+          <div class="portfolio-detail-description">
+            <h2>About This Project</h2>
+            <p id="detailDescription">Loading project description...</p>
+          </div>
         </div>
 
       </div>
+
+      <!-- Navigation between projects -->
+      <div class="project-navigation">
+        <a href="#" class="btn btn--ghost" id="prevProject">
+          <i class="bi bi-arrow-left"></i> Previous Project
+        </a>
+        <a href="index.html#portfolio" class="btn btn--ghost">
+          <i class="bi bi-grid-3x3-gap"></i> All Projects
+        </a>
+        <a href="#" class="btn btn--ghost" id="nextProject">
+          Next Project <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
     </section>
     <!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Projects Data -->
   <script src="assets/js/projects.js"></script>
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
 
