@@ -68,6 +68,26 @@ const PROJECTS_DATA = [
     technologies: ["Figma", "React", "Node.js", "Express", "MongoDB", "Paystack"]
   },
   {
+    id: 13,
+    title: "VibeTok",
+    tagline: "Social app for young Nigerians",
+    category: ["app"],
+    thumbnail: "assets/img/portfolio/vibetok-cover.webp",
+    images: [
+      "assets/img/portfolio/vibetok-cover.webp"
+    ],
+    description:
+      "VibeTok is a Nigerian social media app designed for young adults aged 18–35 to connect, share content, express themselves, and discover new trends in a fun and engaging digital community.",
+    client: "Personal project",
+    role: "UI/UX design",
+    date: "2026",
+    categoryLabel: "Mobile App UI/UX Design",
+    projectUrl: "#",
+    githubUrl: "",
+    figmaUrl: "https://www.figma.com/design/zTWEOKleKZtEGniPHtWpfv/Untitled?node-id=0-1&p=f&t=9qeYUPGKKIrIrFl2-0",
+    technologies: ["Figma", "UI/UX Design", "Mobile App Design"]
+  },
+  {
     id: 1,
     title: "Modern Elegance Boutique",
     tagline: "Fashion e-commerce app",
